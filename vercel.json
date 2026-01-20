@@ -1,0 +1,12 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "framework": "vite",
+  "devCommand": "vite",
+  "installCommand": "npm install",
+  "env": {
+    "VITE_SERVICE_ID": "@vite_service_id",
+    "VITE_TEMPLATE_ID": "@vite_template_id",
+    "VITE_PUBLIC_KEY": "@vite_public_key"
+  }
+}

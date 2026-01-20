@@ -1,10 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 import CustomCursor from "./components/CustomCursor";
 import Navbar from "./components/Navbar";
-import OverlayMenu from "./components/OverlayMenu";
-import ParticlesBackground from "./components/ParticlesBackground";
-import IntroAnimation from "./components/introAnimation";
+import IntroAnimation from "./components/IntroAnimation";
 
 import Home from "./sections/Home";
 import About from "./sections/About";
@@ -17,7 +15,6 @@ import Footer from "./sections/Footer";
 
 export default function App() {
   const [introDone, setIntroDone] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <>
@@ -28,15 +25,8 @@ export default function App() {
 
       {/* MAIN WEBSITE */}
       {introDone && (
-        <div className="relative text-white bg-black">
+        <div className="relative bg-black text-white overflow-x-hidden">
           <CustomCursor />
-          <ParticlesBackground />
-
-          <OverlayMenu
-            isOpen={isMenuOpen}
-            onClose={() => setIsMenuOpen(false)}
-          />
-
           <Navbar />
 
           <Home />
